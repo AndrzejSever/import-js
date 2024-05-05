@@ -1,3 +1,10 @@
+import { saveToLocalStorag } from './js/saveToLocalStorag';
+import { createTaskMarkup } from './js/createTaskMarkup';
+import { renderCarts } from './js/renderCarts'
+import { refs } from './js/refs'
+import { submitForm } from './js/submitForm';
+import { deleteTask } from './js/deleteTask';
+
 /**
  * Створи список справ.
  * На сторінці є два інпути які має вводиться назва і текст задачі.
@@ -14,3 +21,12 @@
  * прибрати завдання зі списку.
  * Список із завданнями має бути доступним після перезавантаження сторінки.
  */
+
+
+
+refs.sabmitForm.addEventListener('submit', submitForm );
+
+refs.taskList.addEventListener('click', deleteTask)
+
+
+renderCarts();
